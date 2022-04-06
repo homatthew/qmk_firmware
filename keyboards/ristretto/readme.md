@@ -13,6 +13,6 @@ An Integrated, Column Stagger, 40% Keyboard with OLED and Rotary Encoder
 
 Make example for this keyboard (after setting up your build envionment):
 
-    make ristretto:default
+    make ristretto:homatthew
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
