@@ -121,11 +121,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 }
 
 #ifdef OLED_ENABLE
-/**
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-	return OLED_ROTATION_270;
+	return OLED_ROTATION_0;
 }
-**/
 
 bool oled_task_kb(void) {
   if (!oled_task_user()) {
@@ -143,10 +141,7 @@ bool oled_task_user(void) {
 	oled_set_cursor(0, 0);
 	sprintf(wpm_str, "WPM: %03d", get_current_wpm());
 	oled_write(wpm_str, false);
-  /*
 	oled_set_cursor(0, 1);
-	sprintf(wpm_str, "WPM: %03d", get_current_wpm());
-  */
 	switch (get_highest_layer(layer_state)) {
 		case 0:
 			oled_write_P(PSTR("LAYER 0"), false);

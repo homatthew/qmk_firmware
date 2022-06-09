@@ -3,7 +3,23 @@
   "notes": "",
   "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "keyboard": "ristretto",
-  "keymap": "ristretto_layout_mine",
+  "keymap": "homatthew",
+  "macros": [
+    ["hello world"],
+    [
+      {"action":"tap", "keycodes": ["LCTL", "LALT", "BSLS"]}
+    ],
+    [
+      {"action":"down", "keycodes": ["LCTL"]},
+      {"action":"tap", "keycodes": ["B"]},
+      {"action": "up","keycodes": ["LCTL"]}
+    ],
+    [
+      {"action":"down", "keycodes": ["LALT"]},
+      {"action":"tap", "keycodes": ["F7"]},
+      {"action": "up","keycodes": ["LALT"]}
+    ]
+  ],
   "layout": "LAYOUT",
   "layers": [
     [
@@ -42,20 +58,20 @@
       "KC_COMM",
       "KC_DOT",
       "KC_SLSH",
-      "LT(2,KC_ENT)",
-      "KC_LCTL",
+      "LT(2,KC_UP)",
+      "KC_LGUI",
       "KC_LALT",
       "MO(2)",
       "KC_LCTL",
       "KC_BSPC",
       "KC_LSFT",
-      "KC_MUTE",
+      "KC_MPLY",
       "LT(1,KC_SPC)",
       "KC_ENT",
       "KC_LGUI",
-      "MO(1)",
-      "KC_RALT",
-      "KC_RCTL"
+      "KC_LEFT",
+      "KC_DOWN",
+      "KC_RGHT"
     ],
     [
       "KC_ESC",
@@ -183,18 +199,18 @@
       "KC_UP",
       "KC_RGHT",
       "KC_TRNS",
+      "KC_GRV",
+      "KC_TRNS",
+      "KC_TRNS",
+      "MACRO_0",
+      "MACRO_1",
+      "MACRO_2",
+      "MACRO_3",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
+      "KC_BSLS",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
