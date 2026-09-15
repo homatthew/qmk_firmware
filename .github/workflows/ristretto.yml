@@ -1,0 +1,40 @@
+name: Build Ristretto Bongo Cat firmware
+
+on:
+  push:
+    branches:
+      - mh-ristretto-via
+    paths:
+      - keyboards/ristretto/**
+      - .github/workflows/ristretto.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli
+
+    steps:
+      - name: Allow the container checkout
+        run: git config --global --add safe.directory '*'
+
+      - name: Check out firmware and submodules
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Install QMK Python dependencies
+        run: pip3 install -r requirements.txt
+
+      - name: Compile Ristretto firmware
+        run: qmk compile -kb ristretto -km homatthew_via
+
+      - name: Upload flashable firmware
+        uses: actions/upload-artifact@v7
+        with:
+          name: ristretto-homatthew-via
+          path: ristretto_homatthew_via.hex
+          if-no-files-found: error

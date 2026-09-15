@@ -25,7 +25,7 @@ enum layers {
 
 #ifdef OLED_ENABLE
 oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
-    return OLED_ROTATION_270;
+    return oled_init_user(OLED_ROTATION_270);
 }
 
 bool oled_task_kb(void) {
