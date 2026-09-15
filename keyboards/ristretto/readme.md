@@ -11,8 +11,14 @@ An Integrated, Column Stagger, 40% Keyboard with OLED and Rotary Encoder
 
     To enter the bootloader, press the button marked "SW1" on the bottom of the PCB.
 
-Make example for this keyboard (after setting up your build envionment):
+Build the default firmware after setting up your build environment:
 
-    make ristretto:homatthew
+    qmk compile -kb ristretto -km default
+
+Matthew's keymap, macros, and OLED customization are under
+`keyboards/ristretto/keymaps/homatthew`. See that folder's README for the
+complete edit, build, flash, GitHub sync, GUI, and OLED artwork workflow.
+
+    qmk compile -kb ristretto -km homatthew
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).

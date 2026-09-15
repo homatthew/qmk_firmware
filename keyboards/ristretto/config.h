@@ -48,3 +48,9 @@
 #define ENCODERS_PAD_A { D4 }
 #define ENCODERS_PAD_B { D6 }
 #define ENCODER_RESOLUTION 4
+
+/* WPM display behavior */
+#define WPM_ALLOW_COUNT_REGRESSION
+#define WPM_SAMPLE_SECONDS 10
+#define WPM_SAMPLE_PERIODS 10
+#define WPM_LAUNCH_CONTROL
